@@ -56,7 +56,7 @@ const Hero = () => {
 
 
   return (
-    <div className="min-h-screen w-full px-10 md:px-20 md:mt-40 lg:mt-10 flex flex-col justify-center items-center">
+    <div className="min-h-screen w-full px-10 md:px-20 md:mt-40 lg:mt-24 flex flex-col justify-center items-center">
       <div className="bg-gradient-to-br from-[#FFD989] to-transparent text-black px-10 py-7 flex flex-col gap-5 rounded-3xl mb-20">
         <div className="flex">
           <div className="flex gap-5 flex-col w-4/5">

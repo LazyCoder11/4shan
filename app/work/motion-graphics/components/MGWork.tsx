@@ -91,8 +91,14 @@ const MGWork = () => {
           "https://res.cloudinary.com/ds85fcfys/video/upload/v1727364136/07_ehfix4.mp4",
           "https://res.cloudinary.com/ds85fcfys/video/upload/v1727364284/03_by1v8o.mp4",
           "https://res.cloudinary.com/ds85fcfys/video/upload/v1727364349/06_ppcusx.mp4",
-          // "/videos/motion-graphics/david different1.mp4",
-          // "/videos/motion-graphics/david_final (1).mp4",
+          "https://res.cloudinary.com/ds85fcfys/video/upload/v1727374394/04_ip4abk.mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
+          "/videos/motion-graphics/david_final (1).mp4",
         ].map((src, index) => (
           <div key={index} ref={addToRefs}>
             <PhoneGraphic videoSrc={src} />
