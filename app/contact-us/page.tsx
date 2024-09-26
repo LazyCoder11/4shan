@@ -6,6 +6,15 @@ import Hero from "./components/Hero";
 import ContactDetails from "./components/ContactDetails";
 
 const Contact = () => {
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
   return (
     <div>
       <Hero />

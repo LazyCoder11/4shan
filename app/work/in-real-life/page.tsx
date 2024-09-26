@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
-import Lenis from "lenis";
+import React, { useEffect, useState } from "react";
 import { Hero } from "./components/Hero";
 
 const IRL = () => {
+
     return (
-        <div>
+        <div> {/* Using key to force re-render */}
             <Hero />
         </div>
     );

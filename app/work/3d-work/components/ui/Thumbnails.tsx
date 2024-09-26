@@ -34,7 +34,7 @@ const Thumbnails: FC = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-20 px-20">
+      <div className="grid grid-cols-3 gap-10 px-20">
         {ThumbnailData.map((thumbnail, index) => (
           <motion.div
             key={index}
@@ -57,7 +57,7 @@ const Thumbnails: FC = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="fixed inset-0 z-50 flex justify-center items-center bg-black/[.5] shadow-box bg-opacity-80"
+                  className="fixed w-[50vw] h-[70vh] m-auto rounded-2xl inset-0 z-50 flex justify-center items-center bg-black/[.5] shadow-box bg-opacity-80"
                 >
                   {/* Fullscreen Image with Slide Animation */}
                   <AnimatePresence>

@@ -124,8 +124,8 @@ const Footer = () => {
         <div className="flex flex-col gap-3 w-1/3">
           <h3 className="font-semibold text-2xl">Quick Links</h3>
           <div className="flex flex-col text-xl gap-1">
-            <a href="/services">Segments</a>
-            <a href="">Portfoilo</a>
+            <a href="/segments">Segments</a>
+            {/* <a href="/work/gaming/">Portfoilo</a> */}
             <a href="/hiring">Career</a>
             <Link href="/work/gaming/thumbnails/pubg">Work</Link>
           </div>

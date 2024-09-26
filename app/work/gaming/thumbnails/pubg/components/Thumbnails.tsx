@@ -55,7 +55,7 @@ const Thumbnails: FC = () => {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.8 }}
                                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                                    className="fixed w-[60vw] h-[70vh] m-auto inset-0 z-50 bg-black bg-opacity-40 rounded-2xl flex justify-center items-center shadow-box"
+                                    className="fixed w-[60vw] h-[70vh] m-auto inset-0 z-50 bg-black/[.5] shadow-box bg-opacity-80 rounded-2xl flex justify-center items-center"
                                 >
                                     {/* Fullscreen Image with Slide Animation */}
                                     <AnimatePresence>

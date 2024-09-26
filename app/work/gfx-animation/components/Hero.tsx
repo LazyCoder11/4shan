@@ -6,7 +6,7 @@ import Image from "next/image";
 export function Hero() {
   return (
     <div className="flex flex-col relative">
-      <div className="flex h-[70vh] justify-center items-center w-full">
+      <div className="flex h-screen justify-center items-center w-full">
         <h1 className='text-[5vw] [text-shadow:0px_0px_100px_#FFD989]'>
         GFX Animation
         </h1>
