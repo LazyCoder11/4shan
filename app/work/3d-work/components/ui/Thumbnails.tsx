@@ -78,7 +78,7 @@ const Thumbnails: FC = () => {
                         src={ThumbnailData[currentImage].href}
                         alt={ThumbnailData[currentImage].alt}
                         width={800}
-                        height={640}
+                        height={840}
                         className="rounded-2xl object-cover"
                       />
                     </motion.div>

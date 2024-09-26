@@ -118,7 +118,7 @@ const Navbar = () => {
           </Link>
         </Menu>
       </div>
-      <div className="">
+      <div className="text-xl">
         <Button
           title="Let's Talk"
           href="/contact-us"

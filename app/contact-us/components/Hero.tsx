@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import PulsatingButton from "./ui/PulseButton";
+import gsap from "gsap";
 
 const Hero = () => {
+
   useEffect(() => {
     const loadCalendlyScript = () => {
       const script = document.createElement("script");
@@ -14,6 +16,7 @@ const Hero = () => {
     loadCalendlyScript();
   }, []);
 
+
   const openCalendlyPopup = () => {
     if (window.Calendly) {
       window.Calendly.showPopupWidget(
@@ -22,28 +25,71 @@ const Hero = () => {
     }
   };
 
+  const textRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const textElements = textRef.current?.querySelectorAll('.animate-text');
+    const buttonElement = buttonRef.current?.querySelectorAll('.link-btn');
+
+    if (textElements) {
+      gsap.fromTo(
+        textElements,
+        { y: 100, rotationZ: 10, opacity: 0 },
+        {
+          y: 0,
+          rotationZ: 0,
+          opacity: 1,
+          duration: 1.5,
+          stagger: 0.3,
+          ease: 'power4.out',
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }, []);
+
+
   return (
     <div className="min-h-screen w-full px-10 md:px-20 md:mt-40 lg:mt-10 flex flex-col justify-center items-center">
       <div className="bg-gradient-to-br from-[#FFD989] to-transparent text-black px-10 py-7 flex flex-col gap-5 rounded-3xl mb-20">
-                <h2 className="text-7xl">Ready to make a meaningful impact?</h2>
-                <p className="text-4xl tracking-normal">
-                    At 4Shan, true strength lies in the exceptional talent of our team,
-                    we’re always looking for new talent to join us, so if you’re
-                    passionate.
-                </p>
-                {/* <div className="text-3xl w-full flex justify-end items-end float-right">
-                    <a href="https://wkf.ms/3YOQFQK" target="_blank" className="bg-black px-4 py-2 rounded-xl text-[#FFD989] hover:outline hover:outline-black transition-all duration-500">
-                        Apply Now!
-                    </a>
-                </div> */}
+        <div className="flex">
+          <div className="flex gap-5 flex-col w-4/5">
+            <div ref={textRef} className="flex gap-3 flex-wrap overflow-hidden">
+              <h2 className="text-7xl shadow-text animate-text">Get</h2>
+              <h2 className="text-7xl shadow-text animate-text">in</h2>
+              <h2 className="text-7xl shadow-text animate-text">Touch</h2>
             </div>
+            <p className="text-4xl tracking-normal">
+              At 4Shan, true strength lies in the exceptional talent of our team,
+              we’re always looking for new talent to join us, so if you’re
+              passionate.
+            </p>
+          </div>
+          <div className="flex justify-center items-center">
+            <div ref={buttonRef} className="flex flex-wrap justify-end items-center gap-5">
+              <a href="https://x.com/4Shan_Digital?t=lqBYBsnwmwgqc87fP36n4A&s=09" className='border border-[#FFD989] px-5 py-3 rounded-3xl bg-[#FFD989] hover:bg-transparent hover:text-[#FFD989] transition-all duration-1000 link-btn'>X</a>
+              <a href="https://www.linkedin.com/in/4-shan-management-firm-a9a7192a9/" className='border border-[#FFD989] px-5 py-3 rounded-3xl bg-[#FFD989] hover:bg-transparent hover:text-[#FFD989] transition-all duration-1000 link-btn'>LINKEDIN</a>
+              <a href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg" className='border border-[#FFD989] px-5 py-3 rounded-3xl bg-[#FFD989] hover:bg-transparent hover:text-[#FFD989] transition-all duration-1000 link-btn'>FACEBOOK</a>
+              <a href="https://www.instagram.com/4shan_digital" className='border border-[#FFD989] px-5 py-3 rounded-3xl bg-[#FFD989] hover:bg-transparent hover:text-[#FFD989] transition-all duration-1000 link-btn'>INSTAGRAM</a>
+              <a href="https://wa.me/message/IUND7W373JQSH1" className='border border-[#FFD989] px-5 py-3 rounded-3xl bg-[#FFD989] hover:bg-transparent hover:text-[#FFD989] transition-all duration-1000 link-btn'>WHATSAPP</a>
+              <a href="https://www.youtube.com/@4ShanOfficial" className='border border-[#FFD989] px-5 py-3 rounded-3xl bg-[#FFD989] hover:bg-transparent hover:text-[#FFD989] transition-all duration-1000 link-btn'>YOUTUBE</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="w-full h-full flex flex-col md:flex-row items-center gap-10">
         <div className="w-full md:w-1/2">
           <button
             onClick={openCalendlyPopup}
             className="flex justify-center w-full bg-gradient-to-br from-[#FFD989] to-transparent rounded-2xl"
           >
-            <h1 className="text-[4vw] text-black">Book an Appointment</h1>
+            <h1 className="text-[4vw] text-black shadow-text">Book an Appointment</h1>
           </button>
           <h2 className="text-[2.3vw] leading-none my-10 tracking-wider">
             We appreciate your interest and look forward to connecting with you.
