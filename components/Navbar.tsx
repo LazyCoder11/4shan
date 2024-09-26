@@ -31,7 +31,7 @@ const Navbar = () => {
       end: "bottom top",
       onUpdate: (self) => {
         const scrollY = self.scroll();
-        if (scrollY > 10) {
+        if (scrollY > 40) {
           setNavbarBg("bg-black");
         } else {
           setNavbarBg("bg-transparent");
@@ -59,8 +59,8 @@ const Navbar = () => {
       </div>
       <div className="flex gap-10">
         <Menu setActive={setActive}>
-          <Link href="/services" className="hover:text-[#FFD989]">
-            Services
+          <Link href="/segments" className="hover:text-[#FFD989]">
+            Segments
           </Link>
           <MenuItem setActive={setActive} active={active} item="Our Work">
             <div className="flex flex-col space-y-4 text-sm">

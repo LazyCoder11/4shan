@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./ui/Button";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -32,7 +33,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
+              href="https://x.com/4Shan_Digital?t=lqBYBsnwmwgqc87fP36n4A&s=09"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#1A91DA] p-2 rounded-full"
@@ -49,7 +50,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
+              href="https://www.youtube.com/@4ShanOfficial"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#B91D1C] p-2 rounded-full"
@@ -66,7 +67,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
+              href="https://wa.me/message/IUND7W373JQSH1"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#21BE5C] p-2 rounded-full"
@@ -83,7 +84,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
+              href="https://www.instagram.com/4shan_digital"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#D32889] p-2 rounded-full"
@@ -100,7 +101,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
+              href="https://www.linkedin.com/in/4-shan-management-firm-a9a7192a9/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#006BA3] p-2 rounded-full"
@@ -121,10 +122,10 @@ const Footer = () => {
         <div className="flex flex-col gap-3 w-1/3">
           <h3 className="font-semibold text-2xl">Quick Links</h3>
           <div className="flex flex-col text-xl gap-1">
-            <a href="">Services</a>
+            <a href="/services">Segments</a>
             <a href="">Portfoilo</a>
-            <a href="">Career</a>
-            <a href="">Work</a>
+            <a href="/hiring">Career</a>
+            <Link href="/work/gaming/thumbnails/pubg">Work</Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 w-1/3">

@@ -16,7 +16,7 @@ export function Hero() {
           <>
             <h1 className="text-4xl font-semibold text-white">
               <span className="text-4xl md:text-[4rem] font-bold mt-1 leading-none [text-shadow:0px_0px_100px_#FFD989]">
-                8bit Head Flick
+                8bit Head Flicker
               </span>
             </h1>
           </>

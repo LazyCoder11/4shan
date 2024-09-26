@@ -19,6 +19,16 @@ export default function Home() {
   const { setIsHomePage } = useAnimation();
 
   useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
+
+  useEffect(() => {
     setIsHomePage(true);
 
     const heroLogo = heroLogoRef.current;
@@ -46,13 +56,13 @@ export default function Home() {
       // Animation for the hero logo
       tl.to(heroLogo, {
         scale: 0.2, // Scale the logo down
-        x: 80,       // Adjust these values based on the final position you want
+        x: 70,       // Adjust these values based on the final position you want
         y: 0,       // Adjust these values based on the final position you want
         // opacity: 0,
         ease: "power4.out",
         // Ensure the logo is fixed during animation
         position: "fixed",
-        top: -12,
+        top: -25,
         left: 0,
         transformOrigin: "0 0", // Anchor the scaling to the top-left
       });
@@ -73,20 +83,20 @@ export default function Home() {
   }, [setIsHomePage]);
 
   return (
-    <main className="px-0 pb-10 relative">
+    <main className="px-0 relative">
       <div className="flex justify-end h-screen w-full flex-col relative">
-        <div ref={heroLogoRef} className=" absolute top-[10em] left-20 -z-50">
+        <div ref={heroLogoRef} className=" absolute top-0 left-20 -z-50">
           <Image
             src="/images/Logo.png"
             width={1100}
             height={1100}
             alt="Hero Logo"
-            className="pt-[10em]"
+            className="mt-[15em]"
           />
         </div>
         <div className="flex items-end my-10">
           <div className="w-4/5">
-            <h1 className="text-[4vw] px-20 leading-tight mt-8">
+            <h1 className="text-[5vw] px-20 leading-tight mt-8">
               Your one stop, for all your <br />
               <span className="font-bold tracking-wide text-[#FFD989] italic">
                 digital needs.
@@ -105,7 +115,7 @@ export default function Home() {
                 width={40}
                 height={40}
                 alt="Scroll to explore"
-                className="text-[#FFD989] "
+                className="text-[#FFD989]"
               />
             </a>
           </div>

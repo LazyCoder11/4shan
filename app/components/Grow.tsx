@@ -6,34 +6,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Grow = () => {
-    const textRef = useRef<HTMLDivElement>(null);
     const numberContainersRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
-        const textElements = textRef.current?.querySelectorAll('.animate-text');
-
-        if (textElements) {
-            gsap.fromTo(textElements,
-                { y: 100, rotationX: 90, opacity: 0 },
-                {
-                    y: 0,
-                    rotationX: 0,
-                    opacity: 1,
-                    duration: 1.5,
-                    stagger: 0.3,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: textRef.current,
-                        start: 'top 80%',
-                        end: 'bottom 20%',
-                        toggleActions: 'play none none reverse',
-                        // scrub: 1,
-                    },
-                }
-            );
-        }
-
-        // Animate numbers
         numberContainersRef.current.forEach((container, index) => {
             if (container) {
                 gsap.fromTo(container,
@@ -41,14 +16,14 @@ const Grow = () => {
                     {
                         x: '0%',
                         opacity: 1,
-                        duration: 1,
-                        ease: 'power3.out',
+                        duration: 3,
+                        ease: 'power4.out',
                         scrollTrigger: {
                             trigger: container,
                             start: 'top 100%',
-                            end: 'bottom 90%',
+                            end: 'bottom 80%',
                             toggleActions: 'play none none reverse',
-                            scrub: 1, // Smooth scrubbing effect
+                            // scrub: 2,
                         },
                     }
                 );
@@ -59,7 +34,7 @@ const Grow = () => {
 
     return (
         <div className='min-h-screen px-5 lg:px-20 my-20 mt-40 relative'>
-            <div ref={textRef} className="flex flex-wrap justify-center gap-3 lg:gap-3 overflow-hidden">
+            <div className="flex flex-wrap justify-center gap-3 lg:gap-3 overflow-hidden">
                 <h2 className='text-[12vw] md:text-[10vw] lg:text-[3vw] leading-tight'>We</h2>
                 <h2 className='text-[12vw] md:text-[10vw] lg:text-[3vw] leading-tight'>grow</h2>
                 <h2 className='text-[12vw] md:text-[10vw] lg:text-[3vw] leading-tight'>as</h2>
