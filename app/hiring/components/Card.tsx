@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 interface CardProps {
     heading: string;
     subHeading: string;
-    href?: string;
+    href: string;
     bullets: string;
     // ref: LegacyRef<HTMLDivElement> | undefined; // Prop to hold bullet points
 }
@@ -17,7 +17,7 @@ const cardVariants = {
 };
 
 // Use forwardRef to pass ref to the component
-const Card = forwardRef<HTMLDivElement, CardProps>(({ heading, subHeading, bullets }, ref) => {
+const Card = forwardRef<HTMLDivElement, CardProps>(({ heading, subHeading, bullets, href }, ref) => {
     return (
         <motion.div
             ref={ref}
@@ -38,7 +38,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({ heading, subHeading, bulle
                             {bullets}
                         </p>
                         <div className="">
-                            <Button title='Apply' href='https://wkf.ms/3YOQFQK' icon='/images/Arrow.svg' iconHeight={18} iconWidth={18} className='px-10 py-2 rounded-xl gap-5 justify-center text-xl transition-all duration-700' />
+                            <Button title='Apply' href={href} icon='/images/Arrow.svg' iconHeight={18} iconWidth={18} className='px-10 py-2 rounded-xl gap-5 justify-center text-xl transition-all duration-700' />
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,9 @@ const Footer = () => {
       <div className="flex">
         <div className="flex flex-col w-1/3 gap-5">
           <div className="flex flex-col gap-5">
-            <Image src="/images/Logo.svg" alt="Logo" width={300} height={300} />
+            <Link href={"/"}>
+              <Image src="/images/Logo.svg" alt="Logo" width={300} height={300} />
+            </Link>
             <p className="text-white text-[1.1vw]">
               Crafting Visions, Frame by Frame
             </p>

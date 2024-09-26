@@ -69,54 +69,63 @@ const Hero = () => {
             {
               heading: "Shorts Editor",
               subHeading: "Valorant",
+              href: "https://wkf.ms/3yEX86f",
               bullets:
                 "Looking for an experienced Shorts editor specializing in Valorant content. Must be skilled in creating high-energy, engaging edits, with a strong understanding of the game’s dynamics. Proficiency in editing software and a portfolio of gaming edits required.",
             },
             {
               heading: "Overlay Artist",
               subHeading: "Creativity",
+              href: "https://wkf.ms/3yEX86f",
               bullets:
                 "We are seeking an Overlay Artist to design and add graphical elements like text, logos, and animations to enhance our video content. Proficiency in design software and a keen eye for detail are essential.",
             },
             {
               heading: "Video Editor",
               subHeading: "Editing",
+              href: "https://wkf.ms/3yEX86f",
               bullets:
                 "Seeking an experienced video editor for BGMI content. Must excel in creating exciting, high-impact edits that capture key gameplay moments. Proficiency in editing software and a portfolio showcasing BGMI or similar battle royale game content required.",
             },
             {
               heading: "GFX Artist",
               subHeading: "Creativity",
+              href: "https://wkf.ms/3YOQFQK",
               bullets:
                 "Seeking a skilled GFX artist with expertise in creating diverse and visually compelling graphics. Must be creative, detail-oriented, and proficient in industry-standard design software. Strong portfolio and communication skills required.",
             },
             {
               heading: "Content Writer",
               subHeading: "Research",
+              href: "https://wkf.ms/3YOQFQK",
               bullets:
                 "Seeking an experienced scriptwriter for creating compelling scripts for videos, ads, and promotional content. Must have a strong storytelling ability, experience with various media formats, and the capability to meet tight deadlines. Submit your resume and portfolio.",
             },
             {
               heading: "HR",
               subHeading: "Management",
+              href: "https://wkf.ms/4cOItTQ",
               bullets:
                 "We are seeking an HR professional for a management role to assist with hiring, onboarding, employee support, benefits management, and ensuring compliance with labor laws. The role focuses on daily HR tasks to help maintain a smooth and positive work environment.",
             },
             {
               heading: "Social Media Manager",
               subHeading: "Management",
+              href: "",
               bullets:
                 "We are seeking a Social Media Manager to manage client accounts, create and post content, analyze performance, and refine strategies for engagement. The ideal candidate will be trend-savvy, skilled in content creation, and able to provide regular insights.",
             },
             {
               heading: "Team Lead",
               subHeading: "Management",
+              href: "",
               bullets:
                 "We are looking for a Team Lead to oversee and guide a team, ensuring project goals are met on time and within scope. The role involves managing daily tasks, providing mentorship, resolving challenges, and fostering a positive and productive work environment.",
             },
             {
               heading: "Content Manager",
               subHeading: "Management",
+              href: "",
               bullets:
                 "We are seeking a Content Manager to oversee content creation and strategy, ensuring consistent brand messaging across all platforms. The role involves managing writers, editing content, and optimizing it for SEO and engagement.",
             },
@@ -124,6 +133,7 @@ const Hero = () => {
             <Card
               key={index}
               //   ref={(el) => (cardsRef.current[index] = el)}
+              href={job.href}
               heading={job.heading}
               subHeading={job.subHeading}
               bullets={job.bullets}

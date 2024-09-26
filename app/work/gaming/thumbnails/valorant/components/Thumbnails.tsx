@@ -55,7 +55,7 @@ const Thumbnails: FC = () => {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.8 }}
                                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                                    className="fixed inset-0 z-50 flex justify-center items-center bg-black/[.5] shadow-box bg-opacity-80"
+                                    className="fixed w-[60vw] h-[70vh] m-auto rounded-2xl  inset-0 z-50 flex justify-center items-center bg-black/[.5] shadow-box bg-opacity-80"
                                 >
                                     {/* Fullscreen Image with Slide Animation */}
                                     <AnimatePresence>
@@ -69,8 +69,8 @@ const Thumbnails: FC = () => {
                                             <Image
                                                 src={ThumbnailData[currentImage].href}
                                                 alt={ThumbnailData[currentImage].alt}
-                                                width={1000}
-                                                height={1000}
+                                                width={800}
+                                                height={800}
                                                 className="rounded-2xl object-cover"
                                             />
                                         </motion.div>
