@@ -10,6 +10,7 @@ import Creators from "./components/Creators";
 import Services from "./components/Services";
 import Grow from "./components/Grow";
 import { Testimonials } from "@/components/Testimonials";
+import MobileWarning from "@/components/MobileWarning";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -84,47 +85,54 @@ export default function Home() {
 
   return (
     <main className="px-0 relative">
-      <div className="flex justify-end h-screen w-full flex-col relative">
-        <div ref={heroLogoRef} className=" absolute top-0 left-20 -z-50">
-          <Image
-            src="/images/Logo.png"
-            width={1100}
-            height={1100}
-            alt="Hero Logo"
-            className="mt-[15em]"
-          />
-        </div>
-        <div className="flex items-end my-10">
-          <div className="w-4/5">
-            <h1 className="text-[5vw] px-20 leading-tight mt-8">
-              Your one stop, for all your <br />
-              <span className="font-bold tracking-wide text-[#FFD989] italic">
-                digital needs.
-              </span>
-            </h1>
+      <div className="hidden md:block">
+        <div className="flex justify-end h-screen w-full flex-col relative">
+          <div ref={heroLogoRef} className=" absolute top-0 left-20 -z-50">
+            <Image
+              src="/images/Logo.png"
+              width={1100}
+              height={1100}
+              alt="Hero Logo"
+              className="mt-[15em]"
+            />
           </div>
-          <div className="flex items-end justify-end w-2/12">
-            <a href="#creators" className="flex items-center gap-5 group">
-              {/* Text will be hidden initially and slide in on hover */}
-              <p className="text-2xl opacity-0 transform translate-x-5 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
-                Scroll to Explore
-              </p>
-              {/* The arrow */}
-              <Image
-                src="/images/yellowArrow.svg"
-                width={40}
-                height={40}
-                alt="Scroll to explore"
-                className="text-[#FFD989]"
-              />
-            </a>
+          <div className="flex items-end my-10">
+            <div className="w-4/5">
+              <h1 className="text-[5vw] px-20 leading-tight mt-8">
+                Your one stop, for all your <br />
+                <span className="font-bold tracking-wide text-[#FFD989] italic">
+                  digital needs.
+                </span>
+              </h1>
+            </div>
+            <div className="flex items-end justify-end w-2/12">
+              <a href="#creators" className="flex items-center gap-5 group">
+                {/* Text will be hidden initially and slide in on hover */}
+                <p className="text-2xl opacity-0 transform translate-x-5 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
+                  Scroll to Explore
+                </p>
+                {/* The arrow */}
+                <Image
+                  src="/images/yellowArrow.svg"
+                  width={40}
+                  height={40}
+                  alt="Scroll to explore"
+                  className="text-[#FFD989]"
+                />
+              </a>
+            </div>
           </div>
         </div>
+        <Creators />
+        <Services />
+        <Grow />
+        <Testimonials />
       </div>
-      <Creators />
-      <Services />
-      <Grow />
-      <Testimonials />
+      {/* Mobile View */}
+      <div className="block md:hidden">
+        <MobileWarning />
+      </div>
+
     </main>
   );
 }

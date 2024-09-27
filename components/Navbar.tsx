@@ -78,6 +78,7 @@ const Navbar = () => {
   };
 
   return (
+    <div className="hidden md:block">
     <div
       ref={navbarRef}
       className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center ${navbarBg} px-20 py-2 transition-all duration-300`}
@@ -161,6 +162,7 @@ const Navbar = () => {
           className="px-10 py-2 rounded-full font-medium gap-3"
         />
       </div>
+    </div>
     </div>
   );
 };

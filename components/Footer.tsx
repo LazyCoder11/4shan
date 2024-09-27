@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
+    <div className="hidden md:block">
     <div className="h-[50vh] px-20 py-20 flex flex-col">
       <div className="flex">
         <div className="flex flex-col w-1/3 gap-5">
@@ -156,6 +157,7 @@ const Footer = () => {
           alt="Payment Cards"
         />
       </div>
+    </div>
     </div>
   );
 };
