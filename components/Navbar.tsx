@@ -62,15 +62,15 @@ const Navbar = () => {
   };
   const pubgVideosClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    window.location.href = "/work/gaming/video/valorant";
+    window.location.href = "/work/gaming/videos/pubg";
   };
   const valorantVideosClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    window.location.href = "/work/gaming/video/valorant";
+    window.location.href = "/work/gaming/videos/valorant";
   };
   const gtaVideosClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    window.location.href = "/work/gaming/video/valorant";
+    window.location.href = "/work/gaming/videos/gta-5";
   };
   const work3DClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
