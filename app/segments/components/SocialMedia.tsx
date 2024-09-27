@@ -17,7 +17,7 @@ const SocialMedia = () => {
             </div>
             <div className="w-fit flex items-center">
                 <Image
-                    src={"/images/irl.jpg"}
+                    src={"/images/Social.jpg"}
                     width={400}
                     height={400}
                     alt='Gaming'

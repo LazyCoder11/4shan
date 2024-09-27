@@ -7,7 +7,7 @@ const WebDev = () => {
         <div className='flex justify-center px-20 gap-20 my-20'>
             <div className="w-fit flex items-center">
                 <Image
-                    src={"/images/3dworkService.jpg"}
+                    src={"/images/Web.png"}
                     width={400}
                     height={400}
                     alt='Gaming'
