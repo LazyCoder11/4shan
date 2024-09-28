@@ -5,12 +5,13 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <div className="flex flex-col relative">
-      <div className="flex h-screen justify-center items-center w-full">
-        <h1 className='text-[5vw] [text-shadow:0px_0px_100px_#FFD989]'>
-        GFX Animation
+    <div className="flex flex-col relative overflow-hidden">
+      <div className="flex h-[50vh] md:h-screen justify-center items-center w-full">
+        <h1 className='text-[12vw] md:text-[5vw] [text-shadow:0px_0px_100px_#FFD989]'>
+          GFX Animation
         </h1>
       </div>
+
       <ContainerScroll
         titleComponent={
           <>
@@ -22,15 +23,25 @@ export function Hero() {
           </>
         }
       >
+        {/* Display different images based on screen size */}
         <Image
-          src={`/images/hfchannel.png`}
-          alt="hero"
+          src={`/images/hfchannelMobile.jpg`}  // Mobile image
+          alt="hero mobile"
           height={720}
           width={1400}
-          className="mx-auto fix rounded-2xl object-cover h-full object-left-top"
+          className="block md:hidden mx-auto fix rounded-2xl object-cover h-full object-left-top"
+          draggable={true}
+        />
+        <Image
+          src={`/images/hfchannel.png`}  // Desktop image
+          alt="hero desktop"
+          height={720}
+          width={1400}
+          className="hidden md:block mx-auto fix rounded-2xl object-cover h-full object-left-top"
           draggable={true}
         />
       </ContainerScroll>
+
       <ContainerScroll
         titleComponent={
           <>
@@ -42,12 +53,21 @@ export function Hero() {
           </>
         }
       >
+        {/* Display different images based on screen size */}
         <Image
-          src={`/images/buddyislive.png`}
-          alt="hero"
+          src={`/images/telugugamingchannelMobile.jpg`}  // Mobile image
+          alt="hero mobile"
           height={720}
           width={1400}
-          className="mx-auto fix rounded-2xl object-cover h-full object-left-top"
+          className="block md:hidden mx-auto fix rounded-2xl object-cover h-full object-left-top"
+          draggable={true}
+        />
+        <Image
+          src={`/images/buddyislive.png`}  // Desktop image
+          alt="hero desktop"
+          height={720}
+          width={1400}
+          className="hidden md:block mx-auto fix rounded-2xl object-cover h-full object-left-top"
           draggable={true}
         />
       </ContainerScroll>

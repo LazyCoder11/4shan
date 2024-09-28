@@ -32,7 +32,7 @@ const Thumbnails: FC = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-3 gap-20 px-20 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 px-10 md:px-20 relative">
                 {ThumbnailData.map((thumbnail, index) => (
                     <motion.div
                         key={index}
@@ -202,10 +202,10 @@ const ThumbnailData = [
         href: "https://4shan.in/wp-content/uploads/2024/08/Ipreet-Lamborghini-Crate-opening-1.jpg",
         alt: "Thumbnail 18",
     },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/bixi-thumbnail-2-2.jpg",
-        alt: "Thumbnail 19",
-    },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/bixi-thumbnail-2-2.jpg",
+    //     alt: "Thumbnail 19",
+    // },
     {
         href: "https://4shan.in/wp-content/uploads/2024/08/bixi-thumbnail-4-2.jpg",
         alt: "Thumbnail 20",
@@ -214,14 +214,14 @@ const ThumbnailData = [
         href: "https://4shan.in/wp-content/uploads/2024/08/bixi-thumbnail-1-2.jpg",
         alt: "Thumbnail 21",
     },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/darpan-thumbnail-15-1.jpg",
-        alt: "Thumbnail 22",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/Gaming-Guru-thumbnail-20-1.jpg",
-        alt: "Thumbnail 23",
-    },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/darpan-thumbnail-15-1.jpg",
+    //     alt: "Thumbnail 22",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/Gaming-Guru-thumbnail-20-1.jpg",
+    //     alt: "Thumbnail 23",
+    // },
     {
         href: "https://4shan.in/wp-content/uploads/2024/08/prathamgaming-thumbnail-59-1.jpg",
         alt: "Thumbnail 24",

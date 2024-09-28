@@ -4,7 +4,7 @@ import Button from './ui/Button'
 
 const WebDev = () => {
     return (
-        <div className='flex justify-center px-20 gap-20 my-20'>
+        <div className='flex flex-col md:flex-row justify-center px-10 md:px-20 gap-20 my-20'>
             <div className="w-fit flex items-center">
                 <Image
                     src={"/images/Web.png"}
@@ -14,7 +14,7 @@ const WebDev = () => {
                     className='rounded-3xl border-[#FFD989] border-2 card-shadow'
                 />
             </div>
-            <div className="w-1/2 flex flex-col justify-center gap-10">
+            <div className="w-full md:w-1/2 flex flex-col justify-center gap-10">
                 <h2 className='text-4xl'>
                 Web Development turns ideas into interactive experiences, bringing visions to life online.
                 </h2>

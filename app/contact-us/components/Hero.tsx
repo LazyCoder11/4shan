@@ -53,25 +53,31 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full px-10 md:px-20 md:mt-40 lg:mt-24 flex flex-col justify-center items-center">
+    <div className="min-h-screen w-full px-10 md:px-20 mt-20 md:mt-40 lg:mt-24 flex flex-col justify-center items-center">
       <div className="bg-gradient-to-br from-[#FFD989] to-transparent text-black px-10 py-7 flex flex-col gap-5 rounded-3xl mb-20">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0">
           <div className="flex gap-5 flex-col w-[90%]">
             <div ref={textRef} className="flex gap-3 flex-wrap overflow-hidden">
-              <h2 className="text-7xl shadow-text animate-text">Get</h2>
-              <h2 className="text-7xl shadow-text animate-text">in</h2>
-              <h2 className="text-7xl shadow-text animate-text">Touch</h2>
+              <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
+                Get
+              </h2>
+              <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
+                in
+              </h2>
+              <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
+                Touch
+              </h2>
             </div>
-            <p className="text-4xl tracking-normal">
-              At 4Shan, true strength lies in the exceptional talent of our
-              team, we’re always looking for new talent to join us, so if you’re
-              passionate.
+            <p className="text-2xl md:text-4xl tracking-normal">
+              At 4Shan, we believe in the power of collaboration and innovation.
+              Whether you have a question, a project, or just want to connect,
+              we're here to listen and help.
             </p>
           </div>
           <div className="flex justify-center items-center">
             <div
               ref={buttonRef}
-              className="flex flex-wrap justify-end items-center gap-5"
+              className="flex flex-wrap md:justify-end items-center gap-5"
             >
               <div className="flex gap-x-3">
                 <a
@@ -129,11 +135,11 @@ const Hero = () => {
             onClick={openCalendlyPopup}
             className="flex justify-center w-full bg-gradient-to-br from-[#FFD989] to-transparent rounded-2xl"
           >
-            <h1 className="text-[4vw] text-black shadow-text">
+            <h1 className="text-[7vw] md:text-[4vw] text-black shadow-text">
               Book an Appointment
             </h1>
           </button>
-          <h2 className="text-[2.3vw] leading-none my-10 tracking-wider">
+          <h2 className="text-[7vw] md:text-[2.3vw] leading-none my-10 tracking-wider">
             We appreciate your interest and look forward to connecting with you.
           </h2>
           <p className="text-2xl">

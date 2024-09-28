@@ -33,8 +33,8 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({ heading, subHeading, bulle
             >
                 <div className='h-full flex flex-col rounded-3xl border-[#FFD989] bg-gradient-to-t from-black to-[#ffda8960] card-shadow  transition-all dureation-500'>
                     <div className="p-10 flex flex-col justify-around gap-5">
-                        <h2 className='text-[2vw] leading-none'>{heading} - <span className='text-[1.5vw] text-white/[.6]'>{subHeading}</span></h2>
-                        <p className='text-[1vw]'>
+                        <h2 className='text-[5vw] md:text-[2vw] leading-none'>{heading} - <span className='text-[vw] md:text-[1.5vw] text-white/[.6]'>{subHeading}</span></h2>
+                        <p className='text-2vw md:text-[1vw]'>
                             {bullets}
                         </p>
                         <div className="">

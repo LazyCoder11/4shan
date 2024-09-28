@@ -45,15 +45,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen px-20 mt-24">
+    <div className="min-h-screen px-10 md:px-20 mt-24">
       <div className="bg-gradient-to-br from-[#FFD989] to-transparent text-black px-10 py-7 flex flex-col gap-5 rounded-3xl">
         <div ref={textRef} className="flex flex-wrap items-center gap-2 overflow-hidden">
-          <h2 className="text-7xl shadow-text leading-snug animate-text">Ready</h2>
-          <h2 className="text-7xl shadow-text leading-snug animate-text">to</h2>
-          <h2 className="text-7xl shadow-text leading-snug animate-text">make</h2>
-          <h2 className="text-7xl shadow-text leading-snug animate-text">a</h2>
-          <h2 className="text-7xl shadow-text leading-snug animate-text">meaningful</h2>
-          <h2 className="text-7xl shadow-text leading-snug animate-text">impact?</h2>
+          <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">Ready</h2>
+          <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">to</h2>
+          <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">make</h2>
+          <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">a</h2>
+          <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">meaningful</h2>
+          <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">impact?</h2>
         </div>
 
         <p className="text-4xl tracking-normal">

@@ -39,7 +39,7 @@ export const VideoContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[75rem] flex items-center justify-center relative p-2 md:px-20"
+      className="h-[60rem] md:h-[75rem] scale-125 md:scale-100 flex items-center justify-center relative p-2 md:px-20"
       ref={containerRef}
       id={id}
     >
@@ -89,11 +89,11 @@ export const Card = ({
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="max-w-7xl mx-auto h-[30rem] md:h-[45rem] w-full p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="max-w-7xl mx-auto h-[40rem] md:h-[45rem] w-full p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-2xl"
     >
       <div className=" h-full w-full rounded-2xl overflow-y-auto bg-[#0F0F0F] md:rounded-2xl">
         {children}
-        <VideoThumbnails className="-mt-[30em] pb-10"/>
+        <VideoThumbnails className="-mt-[35em] md:-mt-[30em] pb-10"/>
       </div>
     </motion.div>
   );

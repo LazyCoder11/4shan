@@ -15,7 +15,7 @@ const ServiceCard: FC<CardProps> = ({
 }) => {
     return (
         <div className='h-fit flex flex-col border-2 rounded-3xl border-[#FFD989] bg-gradient-to-t from-black to-[#ffda8960] card-shadow'>
-            <div className=" p-10 flex flex-col gap-5">
+            <div className="p-5 md:p-10 flex flex-col gap-5">
                 <Image
                     src={href}
                     alt={heading}
@@ -23,8 +23,8 @@ const ServiceCard: FC<CardProps> = ({
                     height={300}
                     className='w-full rounded-2xl'
                 />
-                <h2 className='text-[2vw]'>{heading}</h2>
-                <ul className='list-none list-inside text-[1vw]'>
+                <h2 className='text-[8vw] md:text-[2vw]'>{heading}</h2>
+                <ul className='list-none list-inside text-[4vw] md:text-[1vw]'>
                     {bullets.map((bullet, index) => (
                         <li key={index} className='flex items-center gap-2 mb-2'>
                             <Image

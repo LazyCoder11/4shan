@@ -4,9 +4,9 @@ import Button from './ui/Button'
 
 const SocialMedia = () => {
     return (
-        <div className='flex justify-center px-20 gap-20 my-20'>
+        <div className='flex flex-col-reverse md:flex-row justify-center px-10 md:px-20 gap-20 my-20'>
 
-            <div className="w-1/2 flex flex-col justify-center gap-10">
+            <div className="w-full md:w-1/2 flex flex-col justify-center gap-10">
                 <h2 className='text-4xl'>
                     Social Media Management turns engagement into growth, bringing brands closer to their audience.
                 </h2>

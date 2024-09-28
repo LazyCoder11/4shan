@@ -4,7 +4,7 @@ import Button from './ui/Button'
 
 const IRL = () => {
     return (
-        <div className='flex justify-center px-20 gap-20 my-20'>
+        <div className='flex flex-col md:flex-row justify-center px-10 md:px-20 gap-20 my-20'>
             <div className="w-fit flex items-center">
                 <Image
                     src={"/images/irl.jpg"}
@@ -14,7 +14,7 @@ const IRL = () => {
                     className='rounded-3xl border-[#FFD989] border-2 card-shadow'
                 />
             </div>
-            <div className="w-1/2 flex flex-col justify-center gap-10">
+            <div className="w-full md:w-1/2 flex flex-col justify-center gap-10">
                 <h2 className='text-4xl'>
                 In real life, the best stories are lived, not just told.
                 </h2>

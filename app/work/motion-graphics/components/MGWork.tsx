@@ -68,22 +68,22 @@ const MGWork = () => {
   };
 
   return (
-    <div className="min-h-screen px-20">
-      <div className="flex flex-col justify-center items-center">
-        <h2 className="text-[3vw]">
-          Check out our{" "}
+    <div className="min-h-screen px-10 md:px-20">
+      <div className="flex flex-col md:justify-center md:items-center">
+        <h2 className="text-[9vw] md:text-[3vw] ">
+          Check out our{" "} <br className="block md:hidden"/>
           <span className="bg-[#FFD989] text-black px-4 rounded-xl">
             Latest Work
           </span>
         </h2>
-        <div className="text-[1.2vw] w-1/2 text-center">
+        <div className="text-[5vw] md:text-[1.2vw] md:w-1/2 md:text-center">
           <p>
             Take a look at our selected works below, where we've helped brands & influencers
             tell their stories through captivating motion graphics.
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 my-20 py-10 gap-y-20 justify-center items-center box-blur overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-3 my-20 py-10 gap-y-20 justify-center items-center box-blur overflow-hidden">
         {[
           "https://res.cloudinary.com/ds85fcfys/video/upload/v1727362625/01_nxxugo.mp4",
           "https://res.cloudinary.com/ds85fcfys/video/upload/v1727364088/08_x96bu0.mp4",
@@ -110,7 +110,7 @@ const MGWork = () => {
         ))}
       </div>
       <div className="flex flex-col items-center justify-center gap-10">
-        <h2 className="text-[3vw]">
+        <h2 className="text-[7vw] md:text-[3vw] text-center">
           <span className="bg-[#FFD989] text-black px-4 rounded-xl">
             That is not at all.
           </span>{" "}

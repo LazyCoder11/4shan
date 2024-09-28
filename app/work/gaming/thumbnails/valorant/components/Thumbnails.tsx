@@ -32,7 +32,7 @@ const Thumbnails: FC = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-3 gap-20 px-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 px-10 md:px-20 relative">
                 {ThumbnailData.map((thumbnail, index) => (
                     <motion.div
                         key={index}

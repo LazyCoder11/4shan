@@ -32,7 +32,7 @@ const VideoThumbnails: FC<{ className?: string }> = ({ className }) => {
 
   return (
     <div>
-      <div className={`grid grid-cols-3 gap-5 px-20 ${className ?? ""}`}>
+      <div className={`grid grid-cols-1 md:grid-cols-3 gap-5 px-10 md:px-20 ${className ?? ""}`}>
         {VideoData.map((video, index) => (
           <motion.div
             key={index}

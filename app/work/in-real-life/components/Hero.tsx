@@ -6,12 +6,12 @@ import { VideoContainerScroll } from "./ui/container-scroll-videos";
 
 export function Hero() {
     return (
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative overflow-hidden">
             <ContainerScroll
                 titleComponent={
                     <>
                         <h1 className="text-4xl font-semibold text-white">
-                            <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none [text-shadow:0px_0px_100px_#FFD989]">
+                            <span className="text-5xl md:text-[6rem] font-bold mt-1 leading-none [text-shadow:0px_0px_100px_#FFD989]">
                                 IRL Thumbnails
                             </span>
                         </h1>
@@ -27,7 +27,7 @@ export function Hero() {
                     draggable={true}
                 />
             </ContainerScroll>
-            <div className="absolute right-10 top-[55em] flex items-end justify-end w-2/12">
+            <div className="absolute right-10 top-[55em] md:flex items-end justify-end w-2/12 hidden">
                 <a href="#explore" className="flex items-center gap-5 group">
                     <p className="text-2xl opacity-0 transform translate-x-5 bg-[#FFD989] text-black px-5 rounded-2xl transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
                         Scroll to Explore

@@ -32,7 +32,7 @@ const Thumbnails: FC = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-3 gap-20 px-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 px-10 md:px-20">
                 {ThumbnailData.map((thumbnail, index) => (
                     <motion.div
                         key={index}
@@ -105,8 +105,8 @@ const Thumbnails: FC = () => {
                     </motion.div>
                 ))}
             </div>
-            <div className="flex flex-col items-center justify-center gap-10 mt-20">
-                <h2 className="text-[3vw]">
+            <div className="flex flex-col items-center justify-center px-10 md:px-0 gap-10 mt-20">
+                <h2 className="text-[7vw] md:text-[3vw] text-center">
                     <span className="bg-[#FFD989] text-black px-4 rounded-xl">
                         These are nothing at all.
                     </span>{" "}
@@ -162,18 +162,18 @@ const ThumbnailData = [
         href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-24.jpg",
         alt: "Thumbnail 9",
     },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-66.jpg",
-        alt: "Thumbnail 9",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-81.jpg",
-        alt: "Thumbnail 9",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-83.jpg",
-        alt: "Thumbnail 9",
-    },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-66.jpg",
+    //     alt: "Thumbnail 9",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-81.jpg",
+    //     alt: "Thumbnail 9",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-83.jpg",
+    //     alt: "Thumbnail 9",
+    // },
     {
         href: "https://4shan.in/wp-content/uploads/2024/08/curlbury-thumbnail-53.jpg",
         alt: "Thumbnail 9",
@@ -182,34 +182,34 @@ const ThumbnailData = [
         href: "https://4shan.in/wp-content/uploads/2024/08/rowdzie-thumbnail-8.jpg",
         alt: "Thumbnail 10",
     },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/24july-mafia.jpg",
-        alt: "Thumbnail 11",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-3.jpg",
-        alt: "Thumbnail 12",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-5.jpg",
-        alt: "Thumbnail 13",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-8.jpg",
-        alt: "Thumbnail 14",
-    },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-9.jpg",
-        alt: "Thumbnail 15",
-    },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/24july-mafia.jpg",
+    //     alt: "Thumbnail 11",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-3.jpg",
+    //     alt: "Thumbnail 12",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-5.jpg",
+    //     alt: "Thumbnail 13",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-8.jpg",
+    //     alt: "Thumbnail 14",
+    // },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/Headflicker-thumbnail-9.jpg",
+    //     alt: "Thumbnail 15",
+    // },
     {
         href: "https://4shan.in/wp-content/uploads/2024/08/mafia-8july.jpg",
         alt: "Thumbnail 16",
     },
-    {
-        href: "https://4shan.in/wp-content/uploads/2024/08/mafia-31july2.jpg",
-        alt: "Thumbnail 17",
-    },
+    // {
+    //     href: "https://4shan.in/wp-content/uploads/2024/08/mafia-31july2.jpg",
+    //     alt: "Thumbnail 17",
+    // },
     {
         href: "https://4shan.in/wp-content/uploads/2024/08/rowdzie-thumbnail-9.jpg",
         alt: "Thumbnail 18",

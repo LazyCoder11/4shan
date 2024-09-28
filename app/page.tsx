@@ -12,7 +12,6 @@ import Grow from "./components/Grow";
 import { Testimonials } from "@/components/Testimonials";
 import MobileWarning from "@/components/MobileWarning";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -20,13 +19,13 @@ export default function Home() {
   const { setIsHomePage } = useAnimation();
 
   useEffect(() => {
-    const lenis = new Lenis()
+    const lenis = new Lenis();
 
     function raf(time: any) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
   }, []);
 
   useEffect(() => {
@@ -36,6 +35,9 @@ export default function Home() {
     const navbarLogo = document.querySelector('.navbar .logo') as HTMLElement;
 
     if (heroLogo) {
+      // Detect screen size
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: heroLogo,
@@ -56,24 +58,26 @@ export default function Home() {
 
       // Animation for the hero logo
       tl.to(heroLogo, {
-        scale: 0.2, // Scale the logo down
-        x: 70,       // Adjust these values based on the final position you want
-        y: 0,       // Adjust these values based on the final position you want
-        // opacity: 0,
+        scale: 0.2,  // Scale the logo down
+        x: isMobile ? 30 : 70,  // Adjust x for mobile vs desktop
+        y: 0,
         ease: "power4.out",
-        // Ensure the logo is fixed during animation
         position: "fixed",
         top: -25,
-        left: 0,
+        left: isMobile ? 0 : 0,  // Adjust left for mobile vs desktop
         transformOrigin: "0 0", // Anchor the scaling to the top-left
       });
 
       // Ensure the navbar logo's animation is applied separately
       if (navbarLogo) {
-        tl.to(navbarLogo, {
-          opacity: 1,
-          duration: 0.5,
-        }, "-=0.5");
+        tl.to(
+          navbarLogo,
+          {
+            opacity: 1,
+            duration: 0.5,
+          },
+          "-=0.5"
+        );
       }
 
       return () => {
@@ -85,33 +89,31 @@ export default function Home() {
 
   return (
     <main className="px-0 relative">
-      <div className="hidden md:block">
-        <div className="flex justify-end h-screen w-full flex-col relative">
-          <div ref={heroLogoRef} className=" absolute top-0 left-20 -z-50">
+      <div className="">
+        <div className="flex justify-end md:justify-end h-[90vh] md:h-screen w-full flex-col relative px-10 md:px-20">
+          <div ref={heroLogoRef} className="absolute top-0 left-0 md:left-20 -z-50">
             <Image
               src="/images/Logo.png"
               width={1100}
               height={1100}
               alt="Hero Logo"
-              className="mt-[15em]"
+              className="w-[30em] md:w-full mt-[15em]"
             />
           </div>
-          <div className="flex items-end my-10">
-            <div className="w-4/5">
-              <h1 className="text-[5vw] px-20 leading-tight mt-8">
+          <div className="flex gap-10 flex-col md:flex-row items-start md:items-end md:my-10">
+            <div className="w-full md:w-4/5">
+              <h1 className="text-[11vw] md:text-[5vw] leading-tight mt-8">
                 Your one stop, for all your <br />
                 <span className="font-bold tracking-wide text-[#FFD989] italic">
                   digital needs.
                 </span>
               </h1>
             </div>
-            <div className="flex items-end justify-end w-2/12">
+            <div className="flex  items-end justify-end w-full md:w-2/12">
               <a href="#creators" className="flex items-center gap-5 group">
-                {/* Text will be hidden initially and slide in on hover */}
-                <p className="text-2xl opacity-0 transform translate-x-5 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
+                <p className="text-2xl md:opacity-0 md:transform md:translate-x-5 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
                   Scroll to Explore
                 </p>
-                {/* The arrow */}
                 <Image
                   src="/images/yellowArrow.svg"
                   width={40}
@@ -129,10 +131,9 @@ export default function Home() {
         <Testimonials />
       </div>
       {/* Mobile View */}
-      <div className="block md:hidden">
+      <div className="hidden">
         <MobileWarning />
       </div>
-
     </main>
   );
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Desktop = () => {
     return (
-        <div className="w-full h-screen flex items-center justify-center relative">
+        <div className="w-full h-full flex items-center justify-center relative px-10">
             {/* Desktop frame */}
             <div className="w-[1200px] h-[700px] bg-black relative border-4 border-[#D8D8D8] rounded-xl shadow-xl overflow-hidden">
 
@@ -34,10 +34,10 @@ const Desktop = () => {
             </div>
 
             {/* Stand Design */}
-            <div className="absolute -z-20 bottom-[10px] left-[50%] -translate-x-1/2 w-[250px] h-[200px] bg-[#C0C0C0] rounded-lg flex justify-center items-end shadow-lg">
+            <div className="hidden absolute -z-20 bottom-[10px] left-[50%] -translate-x-1/2 w-[250px] h-[200px] bg-[#C0C0C0] rounded-lg md:flex justify-center items-end shadow-lg">
                 {/* <div className="w-[180px] h-[30px] bg-gray-700 mb-2 rounded-b-full"></div> Stand base */}
             </div>
-            <div className="absolute bottom-0 z-10 left-1/2 -translate-x-1/2 w-[180px] h-[10px] bg-gray-600 rounded-b-lg shadow-lg"></div> {/* Stand Foot */}
+            <div className="hidden absolute bottom-0 z-10 left-1/2 -translate-x-1/2 w-[180px] h-[10px] bg-gray-600 rounded-b-lg shadow-lg"></div> {/* Stand Foot */}
         </div>
     );
 };

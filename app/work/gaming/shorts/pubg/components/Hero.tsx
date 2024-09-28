@@ -5,7 +5,7 @@ import { VideoContainerScroll } from "./ui/container-scroll-videos";
 
 export function Hero() {
     return (
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative overflow-hidden">
             <VideoContainerScroll
                 id="video"
                 titleComponent={
@@ -28,7 +28,7 @@ export function Hero() {
                 />
             </VideoContainerScroll>
             <div className="flex flex-col h-full items-center justify-center gap-10 mt-10">
-                <h2 className="text-[3vw]">
+                <h2 className="text-[5vw] md:text-[3vw] text-center">
                     <span className="bg-[#FFD989] text-black px-4 rounded-xl">
                         These are nothing at all.
                     </span>{" "}
