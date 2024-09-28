@@ -63,7 +63,7 @@ export default function Home() {
         y: 0,
         ease: "power4.out",
         position: "fixed",
-        top: isMobile? -55: -30,
+        top: isMobile? -50 : -30,
         left: isMobile ? 0 : 0,  // Adjust left for mobile vs desktop
         transformOrigin: "0 0", // Anchor the scaling to the top-left
       });

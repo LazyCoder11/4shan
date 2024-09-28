@@ -154,7 +154,7 @@ export function Testimonials() {
     <div className="flex min-h-screen px-5 md:px-20 w-full flex-col gap-20 items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
       <div className="flex justify-center">
         <h2 className="text-[6vw] md:text-[3vw] text-center">
-          Here's what some of our clients have to say about{" "}
+          Here's what some of our clients have to say about{" "} <br/>
           <span className="bg-[#FFD989] text-black px-4 rounded-xl">
             4Shan Digital.
           </span>

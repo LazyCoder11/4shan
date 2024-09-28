@@ -80,95 +80,95 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="hidden md:block">
-      <div
-        ref={navbarRef}
-        className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center ${navbarBg} px-20 py-2 transition-all duration-300`}
-      >
+      <div className="hidden md:block">
         <div
-          className={`logo ${isHomePage ? "invisible" : "visible"}`}
-          ref={logoRef}
+          ref={navbarRef}
+          className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center ${navbarBg} px-20 py-2 transition-all duration-300`}
         >
-          <Link href="/">
-            <Image src="/images/Logo.svg" width={200} height={200} alt="Logo" />
-          </Link>
-        </div>
-        <div className="flex gap-10">
-          <Menu setActive={setActive}>
-            <Link href="/segments" className="hover:text-[#FFD989]">
-              Segments
+          <div
+            className={`logo ${isHomePage ? "invisible" : "visible"}`}
+            ref={logoRef}
+          >
+            <Link href="/">
+              <Image src="/images/Logo.svg" width={200} height={200} alt="Logo" />
             </Link>
-            <MenuItem setActive={setActive} active={active} item="Our Work">
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink
-                  submenu={
-                    <>
-                      <HoveredLink
-                        submenu={
-                          <>
-                            <HoveredLink href="/work/gaming/thumbnails/pubg">BGMI</HoveredLink>
-                            <HoveredLink href="/work/gaming/thumbnails/valorant">Valorant</HoveredLink>
-                            <HoveredLink href="/work/gaming/thumbnails/gta-5">GTA 5</HoveredLink>
-                          </>
-                        }
-                      >
-                        Thumbnails
-                      </HoveredLink>
-                      <HoveredLink
-                        submenu={
-                          <>
-                            <HoveredLink href="/work/gaming/shorts/pubg" onClick={shortsPubgClick}>BGMI</HoveredLink>
-                            <HoveredLink href="/work/gaming/shorts/valorant" onClick={shortsValorantClick}>Valorant</HoveredLink>
-                            <HoveredLink href="/work/gaming/shorts/gta-5" onClick={shortsGTAClick}>GTA 5</HoveredLink>
-                          </>
-                        }
-                      >
-                        Shorts
-                      </HoveredLink>
-                      <HoveredLink
-                        submenu={
-                          <>
-                            <HoveredLink href="/work/gaming/videos/pubg" onClick={pubgVideosClick}>BGMI</HoveredLink>
-                            <HoveredLink href="/work/gaming/videos/valorant" onClick={valorantVideosClick}>Valorant</HoveredLink>
-                            <HoveredLink href="/work/gaming/videos/gta-5" onClick={gtaVideosClick}>GTA 5</HoveredLink>
-                          </>
-                        }
-                      >
-                        Videos
-                      </HoveredLink>
-                    </>
-                  }
-                >
-                  Gaming
-                </HoveredLink>
-                <HoveredLink href="/work/motion-graphics">
-                  Motion Graphic
-                </HoveredLink>
-                <HoveredLink href="/work/gfx-animation">GFX Animation</HoveredLink>
-                <HoveredLink href="/work/in-real-life" onClick={handleClick}>IRL</HoveredLink>
-                <HoveredLink href="/work/3d-work" onClick={work3DClick}>3D Work</HoveredLink>
-              </div>
-            </MenuItem>
-            <Link href="/hiring" className="hover:text-[#FFD989]">
-              Hiring
-            </Link>
-          </Menu>
-        </div>
-        <div className="text-xl">
-          <Button
-            title="Let's Talk"
-            href="/contact-us"
-            icon="/images/Arrow.svg"
-            iconHeight={15}
-            iconWidth={15}
-            className="px-10 py-2 rounded-full font-medium gap-3"
-          />
+          </div>
+          <div className="flex gap-10">
+            <Menu setActive={setActive}>
+              <Link href="/segments" className="hover:text-[#FFD989]">
+                Segments
+              </Link>
+              <MenuItem setActive={setActive} active={active} item="Our Work">
+                <div className="flex flex-col space-y-4 text-sm">
+                  <HoveredLink
+                    submenu={
+                      <>
+                        <HoveredLink
+                          submenu={
+                            <>
+                              <HoveredLink href="/work/gaming/thumbnails/pubg">BGMI</HoveredLink>
+                              <HoveredLink href="/work/gaming/thumbnails/valorant">Valorant</HoveredLink>
+                              <HoveredLink href="/work/gaming/thumbnails/gta-5">GTA 5</HoveredLink>
+                            </>
+                          }
+                        >
+                          Thumbnails
+                        </HoveredLink>
+                        <HoveredLink
+                          submenu={
+                            <>
+                              <HoveredLink href="/work/gaming/shorts/pubg" onClick={shortsPubgClick}>BGMI</HoveredLink>
+                              <HoveredLink href="/work/gaming/shorts/valorant" onClick={shortsValorantClick}>Valorant</HoveredLink>
+                              <HoveredLink href="/work/gaming/shorts/gta-5" onClick={shortsGTAClick}>GTA 5</HoveredLink>
+                            </>
+                          }
+                        >
+                          Shorts
+                        </HoveredLink>
+                        <HoveredLink
+                          submenu={
+                            <>
+                              <HoveredLink href="/work/gaming/videos/pubg" onClick={pubgVideosClick}>BGMI</HoveredLink>
+                              <HoveredLink href="/work/gaming/videos/valorant" onClick={valorantVideosClick}>Valorant</HoveredLink>
+                              <HoveredLink href="/work/gaming/videos/gta-5" onClick={gtaVideosClick}>GTA 5</HoveredLink>
+                            </>
+                          }
+                        >
+                          Videos
+                        </HoveredLink>
+                      </>
+                    }
+                  >
+                    Gaming
+                  </HoveredLink>
+                  <HoveredLink href="/work/motion-graphics">
+                    Motion Graphic
+                  </HoveredLink>
+                  <HoveredLink href="/work/gfx-animation">GFX Animation</HoveredLink>
+                  <HoveredLink href="/work/in-real-life" onClick={handleClick}>IRL</HoveredLink>
+                  <HoveredLink href="/work/3d-work" onClick={work3DClick}>3D Work</HoveredLink>
+                </div>
+              </MenuItem>
+              <Link href="/hiring" className="hover:text-[#FFD989]">
+                Hiring
+              </Link>
+            </Menu>
+          </div>
+          <div className="text-xl">
+            <Button
+              title="Let's Talk"
+              href="/contact-us"
+              icon="/images/Arrow.svg"
+              iconHeight={15}
+              iconWidth={15}
+              className="px-10 py-2 rounded-full font-medium gap-3"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div className="block md:hidden">
-      <MobileNavbar/>
-    </div>
+      <div className="block md:hidden">
+        <MobileNavbar />
+      </div>
     </>
   );
 };
