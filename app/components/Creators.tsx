@@ -13,12 +13,9 @@ const Creators = () => {
                 direction="right"
                 speed="slow"
             />
-            <InfiniteMovingText
-                direction="right"
-                speed="normal" />
-            {/* <div className='flex justify-center'>
+            <div className='flex justify-center'>
                 <h2 className='text-[7vw] md:text-[3vw] text-center'>Loved by more than <br/><span className="bg-[#FFD989] text-black px-4 rounded-xl">150+ Creators</span></h2>
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 interface ButtonProps {
     title: string;
-    href: string;
+    href?: string;
     className?: string;
     icon?: '/images/Arrow.svg';
     iconWidth?: number;

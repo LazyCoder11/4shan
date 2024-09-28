@@ -97,7 +97,7 @@ export default function Home() {
               width={1100}
               height={1100}
               alt="Hero Logo"
-              className="w-[40em] md:w-full mt-[15em]"
+              className="w-[30em] md:w-full mt-[15em]"
             />
           </div>
           <div className="flex gap-10 flex-col md:flex-row items-start md:items-end md:my-10">
