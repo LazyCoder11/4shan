@@ -53,18 +53,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full px-10 md:px-20 mt-20 md:mt-40 lg:mt-24 flex flex-col justify-center items-center">
+    <div className="min-h-screen px-10 md:px-20 mt-24 flex flex-col justify-center items-center overflow-hidden">
       <div className="bg-gradient-to-br from-[#FFD989] to-transparent text-black px-10 py-7 flex flex-col gap-5 rounded-3xl mb-20">
         <div className="flex flex-col md:flex-row gap-5 md:gap-0">
           <div className="flex gap-5 flex-col w-[90%]">
             <div ref={textRef} className="flex gap-3 flex-wrap overflow-hidden">
-              <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
+              <h2 className="text-4xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
                 Get
               </h2>
-              <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
+              <h2 className="text-4xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
                 in
               </h2>
-              <h2 className="text-5xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
+              <h2 className="text-4xl md:text-7xl font-bold shadow-text md:leading-snug animate-text">
                 Touch
               </h2>
             </div>
@@ -135,7 +135,7 @@ const Hero = () => {
             onClick={openCalendlyPopup}
             className="flex justify-center w-full bg-gradient-to-br from-[#FFD989] to-transparent rounded-2xl"
           >
-            <h1 className="text-[7vw] md:text-[4vw] text-black shadow-text">
+            <h1 className="text-4xl md:text-[4vw] text-black shadow-text">
               Book an Appointment
             </h1>
           </button>

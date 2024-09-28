@@ -17,7 +17,7 @@ const Footer = () => {
                 Crafting Visions, Frame by Frame
               </p>
             </div>
-            <div className="hidden md:flex gap-3 w-full items-center">
+            <div className="hidden md:flex gap-3 w-full items-center ">
               <a
                 href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
                 target="_blank"
@@ -124,7 +124,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col mb-10 md:mb-0 gap-3 w-full md:w-1/3">
             <h3 className="font-semibold text-3xl md:text-2xl">Quick Links</h3>
-            <div className="flex flex-col text-xl gap-1">
+            <div className="flex flex-col text-xl gap-1 text-[#FFD989]">
               <a href="/segments">Segments</a>
               <a href="/hiring">Career</a>
               <Link href="/work/gaming/thumbnails/pubg">Work</Link>
@@ -149,7 +149,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center md:items-start md:hidden lg:hidden flex-col gap-5 mb-10 md:mb-10">
             <Link href={"/"}>
-              <Image src="/images/Logo.svg" alt="Logo" width={300} height={300} />
+              <Image src="/images/Logo.svg" alt="Logo" width={400} height={400} />
             </Link>
             <p className="text-white text-3xl md:text-2xl">
               Crafting Visions, Frame by Frame
@@ -261,7 +261,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-0 items-center h-full mt-10 md:mt-10">
-          <p className="text-2xl">Copyright © 2024 BY 4Shan Digital</p>
+          <p className="text-2xl">Copyright © 2024 by <span className="bg-[#FFD989] text-black px-2 rounded-lg">4Shan Digital</span></p>
           <Image
             src="/images/paymentCards.svg"
             width={500}

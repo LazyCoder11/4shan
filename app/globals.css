@@ -55,3 +55,12 @@ body {
 .shadow-text {
   text-shadow: 0 -2px 10px #FFD989;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar for WebKit browsers */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Hides scrollbar in IE and Edge */
+  scrollbar-width: none;     /* Hides scrollbar in Firefox */
+}

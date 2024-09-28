@@ -1,9 +1,10 @@
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import { InfiniteMovingText } from '@/components/ui/infinite-text';
 import React from 'react'
 
 const Creators = () => {
     return (
-        <div id='creators' className="h-full mt-20 px-10 md:px-20 rounded-md flex flex-col gap-10 bg-black bg-grid-white/[0.05]">
+        <div id='creators' className="h-full mt-20 rounded-md flex flex-col gap-10 bg-black bg-grid-white/[0.05]">
             <div className='flex justify-center'>
                 <h2 className='text-[7vw] md:text-[3vw] text-center'>Creators We Worked with</h2>
             </div>
@@ -12,9 +13,12 @@ const Creators = () => {
                 direction="right"
                 speed="slow"
             />
-            <div className='flex justify-center'>
+            <InfiniteMovingText
+                direction="right"
+                speed="normal" />
+            {/* <div className='flex justify-center'>
                 <h2 className='text-[7vw] md:text-[3vw] text-center'>Loved by more than <br/><span className="bg-[#FFD989] text-black px-4 rounded-xl">150+ Creators</span></h2>
-            </div>
+            </div> */}
         </div>
     )
 }

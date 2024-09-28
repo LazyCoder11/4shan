@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: "Your one stop, for all your digital needs.",
 };
 
-export default function GTAShortsLayout({
+export default function GTA5ShortsLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
