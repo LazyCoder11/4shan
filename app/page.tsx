@@ -32,7 +32,7 @@ export default function Home() {
     setIsHomePage(true);
 
     const heroLogo = heroLogoRef.current;
-    const navbarLogo = document.querySelector('.navbar .logo') as HTMLElement;
+    const navbarLogo = document.querySelector(".navbar .logo") as HTMLElement;
 
     if (heroLogo) {
       // Detect screen size
@@ -58,13 +58,13 @@ export default function Home() {
 
       // Animation for the hero logo
       tl.to(heroLogo, {
-        scale: isMobile ? 0.3 : 0.2,  // Scale the logo down
-        x: isMobile ? 30 : 70,  // Adjust x for mobile vs desktop
+        scale: isMobile ? 0.4 : 0.2, // Adjust scale based on screen size
+        x: isMobile ? 30 : 70, // Adjust x for mobile vs desktop
         y: 0,
         ease: "power4.out",
         position: "fixed",
-        top: isMobile? -50 : -30,
-        left: isMobile ? 0 : 0,  // Adjust left for mobile vs desktop
+        top: isMobile ? -50 : -30,
+        left: isMobile ? 0 : 0, // Adjust left for mobile vs desktop
         transformOrigin: "0 0", // Anchor the scaling to the top-left
       });
 
@@ -91,13 +91,13 @@ export default function Home() {
     <main className="px-0 relative">
       <div className="">
         <div className="flex justify-end md:justify-end h-[90vh] md:h-screen w-full flex-col relative px-10 md:px-20">
-          <div ref={heroLogoRef} className="absolute top-0 left-0 md:left-20 -z-50 px-5">
+          <div ref={heroLogoRef} className="absolute top-0 left-0 md:left-20 px-5">
             <Image
               src="/images/Logo.png"
-              width={1100}
-              height={1100}
+              width={1000}
+              height={1000}
               alt="Hero Logo"
-              className="w-[30em] md:w-full mt-[15em]"
+              className="w-[90vw] md:w-[40vw] lg:w-[70vw] mt-[15em]" // Responsive width for different screen sizes
             />
           </div>
           <div className="flex gap-10 flex-col md:flex-row items-start md:items-end md:my-10">
@@ -109,7 +109,7 @@ export default function Home() {
                 </span>
               </h1>
             </div>
-            <div className="flex  items-end justify-end w-full md:w-2/12">
+            <div className="flex items-end justify-end w-full md:w-2/12">
               <a href="#services" className="flex items-center gap-5 group">
                 <p className="bg-[#FFD989] text-black px-2 py-1 rounded-xl text-2xl md:opacity-0 md:transform md:translate-x-5 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
                   Scroll to Explore
