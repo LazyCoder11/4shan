@@ -11,8 +11,8 @@ export function Hero() {
                 titleComponent={
                     <>
                         <h1 className="text-4xl font-semibold text-white">
-                            <span className="text-4xl md:text-[6rem] font-bold leading-none [text-shadow:0px_0px_100px_#FFD989]">
-                                PUBG / BGMI Shorts
+                            <span className="text-4xl md:text-[6rem] font-bold leading-none text-center md:text-left [text-shadow:0px_0px_100px_#FFD989]">
+                                BGMI Shorts
                             </span>
                         </h1>
                     </>
@@ -34,9 +34,9 @@ export function Hero() {
                     </span>{" "}
                     We have much more...
                 </h2>
-                <a className="border border-[#FFD989] px-10 text-center py-5 rounded-2xl cursor-pointer">
+                <a href="malito:contact@4shan.in" className="border border-[#FFD989] px-5 md:px-10 text-center py-3 md:py-5 rounded-2xl cursor-pointer">
                     <h3>Get In Touch</h3>
-                    <h4 className="text-2xl">contact@4shan.in</h4>
+                    <h4 className="text-xl md:text-2xl">contact@4shan.in</h4>
                 </a>
             </div>
         </div>

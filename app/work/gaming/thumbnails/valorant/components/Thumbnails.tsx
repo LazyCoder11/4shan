@@ -106,17 +106,15 @@ const Thumbnails: FC = () => {
                 ))}
             </div>
             <div className="flex flex-col items-center justify-center gap-10 mt-20">
-                <h2 className="text-[3vw]">
-                    <span className="bg-[#FFD989] text-black px-4 rounded-xl">
+                <h2 className="text-[5vw] md:text-[3vw] text-center">
+                    <span className="bg-[#FFD989] text-black px-4 rounded-lg md:rounded-xl">
                         That is not at all.
                     </span>{" "}
                     We have much more...
                 </h2>
-                <a
-                    className="border border-[#FFD989] px-10 text-center py-5 rounded-2xl cursor-pointer"
-                >
+                <a href="malito:contact@4shan.in" className="border border-[#FFD989] px-5 md:px-10 text-center py-3 md:py-5 rounded-2xl cursor-pointer">
                     <h3>Get In Touch</h3>
-                    <h4 className="text-2xl">contact@4shan.in</h4>
+                    <h4 className="text-xl md:text-2xl">contact@4shan.in</h4>
                 </a>
             </div>
         </div>

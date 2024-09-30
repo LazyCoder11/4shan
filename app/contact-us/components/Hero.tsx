@@ -74,7 +74,7 @@ const Hero = () => {
               we're here to listen and help.
             </p>
           </div>
-          <div className="flex justify-center items-center">
+          {/* <div className="flex justify-center items-center">
             <div
               ref={buttonRef}
               className="flex flex-wrap md:justify-end items-center gap-5"
@@ -126,16 +126,16 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="w-full h-full flex flex-col md:flex-row items-center gap-10">
         <div className="w-full md:w-1/2">
           <button
             onClick={openCalendlyPopup}
-            className="flex justify-center w-full bg-gradient-to-br from-[#FFD989] to-transparent rounded-2xl"
+            className="flex justify-center w-full bg-gradient-to-br from-[#FFD989] to-transparent rounded-2xl py-5 md:py-5"
           >
-            <h1 className="text-4xl md:text-[4vw] text-black shadow-text">
+            <h1 className="text-4xl md:text-[4vw] text-black md:shadow-text">
               Book an Appointment
             </h1>
           </button>

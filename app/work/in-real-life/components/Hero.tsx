@@ -11,7 +11,7 @@ export function Hero() {
                 titleComponent={
                     <>
                         <h1 className="text-4xl font-semibold text-white">
-                            <span className="text-5xl md:text-[6rem] font-bold mt-1 leading-none [text-shadow:0px_0px_100px_#FFD989]">
+                            <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none [text-shadow:0px_0px_100px_#FFD989]">
                                 IRL Thumbnails
                             </span>
                         </h1>
@@ -48,7 +48,7 @@ export function Hero() {
                         Scroll guys,
                         <br />
                     </span>{" "}
-                    these are noting, we have much more...
+                    these are nothing, we have much more...
                 </h1>
             </div>
             <VideoContainerScroll

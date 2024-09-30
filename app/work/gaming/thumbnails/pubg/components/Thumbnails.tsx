@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { FC, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward, IoMdClose } from "react-icons/io";
+import toast from "react-hot-toast";
 
 interface ThumbnailProps {
     href: string;
@@ -27,6 +28,21 @@ const Thumbnails: FC = () => {
         if (currentImage !== null) {
             setDirection("prev");
             setCurrentImage((prev) => (prev! - 1 + ThumbnailData.length) % ThumbnailData.length);
+        }
+    };
+    const handleEmailClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const email = "contact@4shan.in";
+
+        try {
+            await navigator.clipboard.writeText(email);
+            toast.success("Email copied successfully!", {
+                duration: 100,
+                position: "bottom-center",
+            });
+        } catch (err) {
+            console.error("Failed to copy: ", err);
+            toast.error("Failed to copy email. Please try again.");
         }
     };
 
@@ -105,18 +121,16 @@ const Thumbnails: FC = () => {
                     </motion.div>
                 ))}
             </div>
-            <div className="flex flex-col items-center justify-center gap-10 mt-10">
-                <h2 className="text-[3vw]">
-                    <span className="bg-[#FFD989] text-black px-4 rounded-xl">
+            <div className="flex flex-col items-center justify-center gap-10 mt-10 px-10 md:px-0">
+                <h2 className="text-[5vw] md:text-[3vw] text-center">
+                    <span className="bg-[#FFD989] text-black px-4 rounded-lg md:rounded-xl">
                         That is not at all.
                     </span>{" "}
                     We have much more...
                 </h2>
-                <a
-                    className="border border-[#FFD989] px-10 text-center py-5 rounded-2xl cursor-pointer"
-                >
+                <a href="malito:contact@4shan.in" className="border border-[#FFD989] px-5 md:px-10 text-center py-3 md:py-5 rounded-2xl cursor-pointer">
                     <h3>Get In Touch</h3>
-                    <h4 className="text-2xl">contact@4shan.in</h4>
+                    <h4 className="text-xl md:text-2xl">contact@4shan.in</h4>
                 </a>
             </div>
         </div>

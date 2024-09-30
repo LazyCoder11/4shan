@@ -1,4 +1,6 @@
-import React, { useRef, useState } from "react";
+"use client"
+
+import React, { useEffect, useRef, useState } from "react";
 import YouTube from "react-youtube";
 
 type PhoneGraphicProps = {
@@ -8,18 +10,37 @@ type PhoneGraphicProps = {
 const PhoneGraphic: React.FC<PhoneGraphicProps> = ({ videoSrc }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect if the user is on a mobile device by checking screen width
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust this value based on your requirements
+    };
+
+    checkIsMobile(); // Initial check
+    window.addEventListener("resize", checkIsMobile); // Re-check on window resize
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
 
   const handleMouseEnter = () => {
-    setIsHovering(true);
-    if (videoRef.current) {
-      videoRef.current.play();
+    if (!isMobile) {
+      setIsHovering(true);
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
     }
   };
 
   const handleMouseLeave = () => {
-    setIsHovering(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
+    if (!isMobile) {
+      setIsHovering(false);
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
     }
   };
 
@@ -55,6 +76,7 @@ const PhoneGraphic: React.FC<PhoneGraphicProps> = ({ videoSrc }) => {
                     muted
                     loop
                     playsInline
+                    autoPlay={isMobile}
                     className="h-full z-40 cursor-pointer"
                   />
                 )}

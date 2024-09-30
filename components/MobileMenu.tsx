@@ -213,6 +213,7 @@ const MobileNavbar = () => {
               <HoveredLink href="/work/motion-graphics" onClick={toggleMenu}>Motion Graphics</HoveredLink>
               <HoveredLink href="/work/gfx-animation" onClick={toggleMenu}>GFX Animation</HoveredLink>
               <HoveredLink href="/work/in-real-life" onClick={toggleMenu}>IRL</HoveredLink>
+              <HoveredLink href="/work/3d-work">3D Work</HoveredLink>
             </motion.div>
           </li>
 

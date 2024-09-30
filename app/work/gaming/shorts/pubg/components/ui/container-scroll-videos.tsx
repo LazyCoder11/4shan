@@ -70,7 +70,7 @@ export const VideoContainerScroll = ({
       id={id}
     >
       <div
-        className="pt-10 md:pt-40 w-full relative"
+        className="pt-24 md:pt-40 w-full relative"
         style={{
           perspective: "1000px",
         }}

@@ -16,8 +16,8 @@ const FooterMobile = () => {
             </div>
             <hr className="w-full my-5 border-gray-500" />
             <div className="flex items-center flex-col">
-                <Link href={"/"}>
-                    <Image src="/images/Logo.svg" alt="Logo" width={200} height={200} />
+                <Link href="/">
+                    <Image src="/images/Logo.svg" width={200} height={200} alt="Logo" />
                 </Link>
                 <p className="text-white text-lg mb-5">© 2016 by <span className="italic text-[#FFD989]">4Shan Digital</span></p>
             </div>
@@ -26,7 +26,7 @@ const FooterMobile = () => {
                     href="https://www.facebook.com/share/md5fj8xbXcZXsATh/?mibextid=qi2Omg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#355089] p-2 rounded-full"
+                    className="bg-[#FFD989] text-black p-2 rounded-full"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const FooterMobile = () => {
                     href="https://x.com/4Shan_Digital?t=lqBYBsnwmwgqc87fP36n4A&s=09"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#1A91DA] p-2 rounded-full"
+                    className="bg-[#FFD989] text-black p-2 rounded-full"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const FooterMobile = () => {
                     href="https://www.youtube.com/@4ShanOfficial"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#B91D1C] p-2 rounded-full"
+                    className="bg-[#FFD989] text-black p-2 rounded-full"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const FooterMobile = () => {
                     href="https://wa.me/message/IUND7W373JQSH1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#21BE5C] p-2 rounded-full"
+                    className="bg-[#FFD989] text-black p-2 rounded-full"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const FooterMobile = () => {
                     href="https://www.instagram.com/4shan_digital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#D32889] p-2 rounded-full"
+                    className="bg-[#FFD989] text-black p-2 rounded-full"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ const FooterMobile = () => {
                     href="https://www.linkedin.com/in/4-shan-management-firm-a9a7192a9/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#006BA3] p-2 rounded-full"
+                    className="bg-[#FFD989] text-black p-2 rounded-full"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
