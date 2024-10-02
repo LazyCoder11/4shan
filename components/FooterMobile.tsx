@@ -19,7 +19,7 @@ const FooterMobile = () => {
                 <Link href="/">
                     <Image src="/images/Logo.svg" width={200} height={200} alt="Logo" />
                 </Link>
-                <p className="text-white text-lg mb-5">© 2016 by <span className="italic text-[#FFD989]">4Shan Digital</span></p>
+                <p className="text-white text-lg mb-5">© 2014 by <span className="italic text-[#FFD989]">4Shan Digital</span></p>
             </div>
             <div className="flex gap-3 w-full items-center justify-center">
                 <a

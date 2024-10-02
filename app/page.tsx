@@ -11,6 +11,7 @@ import Services from "./components/Services";
 import Grow from "./components/Grow";
 import { Testimonials } from "@/components/Testimonials";
 import MobileWarning from "@/components/MobileWarning";
+import Procedure from "./components/Procedure";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,6 +128,7 @@ export default function Home() {
         </div>
         <Creators />
         <Services />
+        {/* <Procedure/> */}
         <Grow />
         <Testimonials />
       </div>
