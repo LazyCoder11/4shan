@@ -12,6 +12,7 @@ import Grow from "./components/Grow";
 import { Testimonials } from "@/components/Testimonials";
 import MobileWarning from "@/components/MobileWarning";
 import Procedure from "./components/Procedure";
+import Popup from "@/components/Popup";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,6 +90,8 @@ export default function Home() {
   }, [setIsHomePage]);
 
   return (
+    <>
+    <Popup/>
     <main className="px-0 relative">
       <div className="">
         <div className="flex justify-end md:justify-end h-[90vh] md:h-screen w-full flex-col relative px-10 md:px-20">
@@ -137,5 +140,6 @@ export default function Home() {
         <MobileWarning />
       </div>
     </main>
+    </>
   );
 }

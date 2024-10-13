@@ -94,7 +94,7 @@ export const Card = ({
     >
       <div className=" h-full w-full rounded-2xl overflow-y-auto bg-[#0F0F0F] md:rounded-2xl">
         {children}
-        <VideoThumbnails className="-mt-[24em] pb-10"/>
+        <VideoThumbnails className="-mt-[28em] pb-10"/>
       </div>
     </motion.div>
   );
