@@ -1,6 +1,8 @@
-"use client"
+"use client";
 
+import { Pause, Play, Speaker, Volume, Volume2, VolumeIcon, VolumeXIcon } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
+import { GoUnmute } from "react-icons/go";
 import YouTube from "react-youtube";
 
 type PhoneGraphicProps = {
@@ -11,6 +13,9 @@ const PhoneGraphic: React.FC<PhoneGraphicProps> = ({ videoSrc }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Default to muted
+  const [isInViewport, setIsInViewport] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false); // Track play/pause for mobile
 
   useEffect(() => {
     // Detect if the user is on a mobile device by checking screen width
@@ -23,6 +28,29 @@ const PhoneGraphic: React.FC<PhoneGraphicProps> = ({ videoSrc }) => {
 
     return () => {
       window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Set up an IntersectionObserver to mute the video when it goes out of the viewport
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInViewport(entry.isIntersecting);
+        if (!entry.isIntersecting && videoRef.current) {
+          videoRef.current.muted = true; // Mute the video when out of viewport
+        }
+      },
+      { threshold: 0.5 } // Adjust as necessary, 0.5 means 50% of the video should be visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
     };
   }, []);
 
@@ -41,6 +69,24 @@ const PhoneGraphic: React.FC<PhoneGraphicProps> = ({ videoSrc }) => {
       if (videoRef.current) {
         videoRef.current.pause();
       }
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
     }
   };
 
@@ -73,14 +119,33 @@ const PhoneGraphic: React.FC<PhoneGraphicProps> = ({ videoSrc }) => {
                   <video
                     ref={videoRef}
                     src={videoSrc}
-                    muted
+                    muted={isMuted} // Control mute state
                     loop
                     playsInline
-                    autoPlay={isMobile}
+                    // Disable autoplay on mobile, use play/pause button instead
+                    autoPlay={!isMobile && isHovering}
                     className="h-full z-40 cursor-pointer"
                   />
                 )}
               </div>
+              {/* Mute/Unmute Button */}
+              {!isYouTubeLink && (
+                <button
+                  onClick={toggleMute}
+                  className="absolute bottom-2 right-2 bg-[#FFD989] text-black p-2 rounded-full z-50"
+                >
+                  {isMuted ? <Volume2 /> : <VolumeXIcon />}
+                </button>
+              )}
+              {/* Play/Pause Button for Mobile */}
+              {isMobile && !isYouTubeLink && (
+                <button
+                  onClick={togglePlay}
+                  className="absolute bottom-2 left-2 bg-[#FFD989] text-black p-2 rounded-full z-50"
+                >
+                  {isPlaying ? <Pause /> : <Play />}
+                </button>
+              )}
             </div>
           </div>
         </div>
