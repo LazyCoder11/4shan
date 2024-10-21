@@ -28,9 +28,9 @@ const Popup = () => {
                     exit="hidden"
                     variants={popupVariants}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="fixed inset-0 flex items-center justify-center bg-black/40 bg-opacity-50 z-[9999999999]"
+                    className="fixed inset-0  flex items-center justify-center bg-black/40 bg-opacity-50 z-[9999999999]"
                 >
-                    <div className="bg-black mx-10 w-full md:w-[40%] border-2 border-[#FFD989] p-8 rounded-xl relative">
+                    <div className="bg-black max-h-[60vh] mx-10 w-full md:w-[40%] border-2 overflow-auto border-[#FFD989] p-8 rounded-xl relative">
                         <h2 className="text-2xl text-[#FFD989] tracking-wide text-center font-bold">
                             IMPORTANT ANNOUNCEMENT!
                         </h2>
@@ -57,7 +57,7 @@ const Popup = () => {
 
                         <p className="text-[#FFD989] flex items-center text-center mt-4 font-semibold">
                             <hr className="w-full border-[#FFD989]"/>
-                            <span className="w-full">THANK YOU<br/> FOR YOUR SUPPORT</span>
+                            <span className="w-full">THANK YOU<br className="hidden md:block"/> FOR YOUR SUPPORT</span>
                             <hr className="w-full border-[#FFD989]"/>
                         </p>
                         <button
