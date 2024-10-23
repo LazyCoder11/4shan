@@ -12,6 +12,24 @@ const StreamOverlays: FC = () => {
             {/* Bento Grid Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-10 md:px-20">
                 {/* First Image */}
+                <div className="col-span-1 lg:col-span-3 w-full">
+                    <Image
+                        src={"/images/eclairsBanner.jpg"}
+                        alt="Thumbnail 3"
+                        width={1500}
+                        height={800}
+                        className="w-full h-auto rounded-lg object-cover"
+                    />
+                </div>
+                <div className="col-span-1 lg:col-span-3 w-full">
+                    <Image
+                        src={"/images/chikuBanner.jpg"}
+                        alt="Thumbnail 3"
+                        width={1500}
+                        height={800}
+                        className="w-full h-auto rounded-lg object-cover"
+                    />
+                </div>
                 <div className="col-span-1 lg:col-span-2 lg:row-span-2 w-full">
                     <Image
                         src={"/images/dadamnBanner.jpg"}
@@ -43,6 +61,7 @@ const StreamOverlays: FC = () => {
                         className="w-full h-auto rounded-lg object-cover"
                     />
                 </div>
+
             </div>
 
 

@@ -116,6 +116,18 @@ export default VideoThumbnails;
 
 const VideoData = [
   {
+    src: "NxJtraLGeAw", // YouTube video ID
+    title: "Video 1",
+  },
+  {
+    src: "tGgT8PSm_go", // YouTube video ID
+    title: "Video 1",
+  },
+  {
+    src: "e6QEcq_9eXE", // YouTube video ID
+    title: "Video 1",
+  },
+  {
     src: "9ManrRsjhWk", // YouTube video ID
     title: "Video 1",
   },

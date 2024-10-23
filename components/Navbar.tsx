@@ -13,7 +13,7 @@ import MobileNavbar from "./MobileMenu";
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
-  const [active, setActive] = useState<string | null>(null);
+  const [active, setActive] = useState<string | null>(null); // Track the active dropdown
   const [navbarBg, setNavbarBg] = useState<string>("bg-transparent");
   const { isHomePage } = useAnimation();
   const logoRef = useRef<HTMLDivElement>(null);
@@ -45,37 +45,18 @@ const Navbar = () => {
     };
   }, [isHomePage]);
 
-  const handleClick = (e: { preventDefault: () => void; }) => {
+  // Handle navigation actions
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    href: string
+  ) => {
     e.preventDefault();
-    window.location.href = "/work/in-real-life";
+    window.location.href = href;
   };
-  const shortsPubgClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/gaming/shorts/pubg";
-  };
-  const shortsValorantClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/gaming/shorts/valorant";
-  };
-  const shortsGTAClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/gaming/shorts/gta-5";
-  };
-  const pubgVideosClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/gaming/videos/pubg";
-  };
-  const valorantVideosClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/gaming/videos/valorant";
-  };
-  const gtaVideosClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/gaming/videos/gta-5";
-  };
-  const work3DClick = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    window.location.href = "/work/3d-work";
+
+  // Close active dropdown when a new one is opened
+  const toggleDropdown = (dropdownName: string) => {
+    setActive((prevActive) => (prevActive === dropdownName ? null : dropdownName));
   };
 
   return (
@@ -117,9 +98,9 @@ const Navbar = () => {
                         <HoveredLink
                           submenu={
                             <>
-                              <HoveredLink href="/work/gaming/shorts/pubg" onClick={shortsPubgClick}>BGMI</HoveredLink>
-                              <HoveredLink href="/work/gaming/shorts/valorant" onClick={shortsValorantClick}>Valorant</HoveredLink>
-                              <HoveredLink href="/work/gaming/shorts/gta-5" onClick={shortsGTAClick}>GTA 5</HoveredLink>
+                              <HoveredLink href="/work/gaming/shorts/pubg" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/gaming/shorts/pubg")}>BGMI</HoveredLink>
+                              <HoveredLink href="/work/gaming/shorts/valorant" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/gaming/shorts/valorant")}>Valorant</HoveredLink>
+                              <HoveredLink href="/work/gaming/shorts/gta-5" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/gaming/shorts/gta-5")}>GTA 5</HoveredLink>
                             </>
                           }
                         >
@@ -128,9 +109,9 @@ const Navbar = () => {
                         <HoveredLink
                           submenu={
                             <>
-                              <HoveredLink href="/work/gaming/videos/pubg" onClick={pubgVideosClick}>BGMI</HoveredLink>
-                              <HoveredLink href="/work/gaming/videos/valorant" onClick={valorantVideosClick}>Valorant</HoveredLink>
-                              <HoveredLink href="/work/gaming/videos/gta-5" onClick={gtaVideosClick}>GTA 5</HoveredLink>
+                              <HoveredLink href="/work/gaming/videos/pubg" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/gaming/videos/pubg")}>BGMI</HoveredLink>
+                              <HoveredLink href="/work/gaming/videos/valorant" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/gaming/videos/valorant")}>Valorant</HoveredLink>
+                              <HoveredLink href="/work/gaming/videos/gta-5" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/gaming/videos/gta-5")}>GTA 5</HoveredLink>
                             </>
                           }
                         >
@@ -145,8 +126,8 @@ const Navbar = () => {
                     Motion Graphic
                   </HoveredLink>
                   <HoveredLink href="/work/gfx-animation">GFX Animation</HoveredLink>
-                  <HoveredLink href="/work/in-real-life" onClick={handleClick}>IRL</HoveredLink>
-                  <HoveredLink href="/work/3d-work" onClick={work3DClick}>3D Work</HoveredLink>
+                  <HoveredLink href="/work/in-real-life" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/in-real-life")}>IRL</HoveredLink>
+                  <HoveredLink href="/work/3d-work" onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClick(e, "/work/3d-work")}>3D Work</HoveredLink>
                 </div>
               </MenuItem>
               <Link href="/hiring" className="hover:text-[#FFD989]">

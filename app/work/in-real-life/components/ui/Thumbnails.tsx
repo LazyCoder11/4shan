@@ -114,12 +114,20 @@ export default Thumbnails;
 
 const ThumbnailData = [
     {
-        href: "https://4shan.in/wp-content/uploads/2024/09/beaststats-thumbnail-8.webp",
+        href: "/images/sharksheThumbnail1.jpg",
         alt: "Thumbnail 1",
     },
     {
-        href: "https://4shan.in/wp-content/uploads/2024/09/beaststats-thumbnail-10-1.webp",
+        href: "/images/sharksheThumbnail2.jpg",
         alt: "Thumbnail 2",
+    },
+    {
+        href: "https://4shan.in/wp-content/uploads/2024/09/beaststats-thumbnail-8.webp",
+        alt: "Thumbnail 3",
+    },
+    {
+        href: "https://4shan.in/wp-content/uploads/2024/09/beaststats-thumbnail-10-1.webp",
+        alt: "Thumbnail 4",
     },
     {
         href: "https://4shan.in/wp-content/uploads/2024/09/beaststats-thumbnail-17.jpg",
