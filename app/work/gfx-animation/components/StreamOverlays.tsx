@@ -67,7 +67,7 @@ const StreamOverlays: FC = () => {
 
             {/* Footer Section */}
             <div className="flex flex-col items-center justify-center px-10 gap-10 mt-20">
-                <h2 className="text-[7vw] md:text-[3vw] text-center">
+                <h2 className="text-[6vw] md:text-[3vw] text-center">
                     <span className="bg-[#FFD989] text-black px-4 rounded-xl">
                         These are nothing at all.
                     </span>{" "}
